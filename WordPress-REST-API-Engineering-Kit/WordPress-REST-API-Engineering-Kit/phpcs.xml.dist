@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<ruleset name="REST API Engineering Kit">
+  <description>PSR-12 with WordPress-style snake_case names, plus PHP compatibility checks.</description>
+  <file>rest-api-engineering-kit.php</file>
+  <file>uninstall.php</file>
+  <file>includes</file>
+  <file>tests</file>
+  <arg name="extensions" value="php"/>
+  <arg value="ps"/>
+  <rule ref="PSR12">
+    <exclude name="PSR1.Methods.CamelCapsMethodName"/>
+    <exclude name="Squiz.Classes.ValidClassName"/>
+    <exclude name="PSR1.Files.SideEffects"/>
+  </rule>
+  <config name="testVersion" value="8.0-"/>
+  <rule ref="PHPCompatibilityWP"/>
+</ruleset>
